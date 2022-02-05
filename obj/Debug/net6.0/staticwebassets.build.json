@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "/aY5jGnSsE2nPfCsifF/JNobq6HhHVkheQHcFCuwNYA=",
+  "Source": "HomeWork",
+  "BasePath": "_content/HomeWork",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HomeWork\\wwwroot",
+      "Source": "HomeWork",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\HomeWork\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
