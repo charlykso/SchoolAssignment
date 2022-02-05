@@ -6133,11 +6133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\HomeWork\\HomeWork.csproj",
+      "projectUniqueName": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\HomeWork.csproj",
       "projectName": "HomeWork",
-      "projectPath": "c:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\HomeWork\\HomeWork.csproj",
+      "projectPath": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\HomeWork.csproj",
       "packagesPath": "C:\\Users\\Ikenna Remigius\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\HomeWork\\obj\\",
+      "outputPath": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ikenna Remigius\\AppData\\Roaming\\NuGet\\NuGet.Config"
