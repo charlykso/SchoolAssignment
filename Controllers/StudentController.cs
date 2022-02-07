@@ -117,17 +117,17 @@ namespace HomeWork.Controllers
         {
             try
             {
-                var guid = Guid.NewGuid();
-                var filePath = Path.Combine("wwwroot", guid + ".jpg");
-                if (newStudent.Image == null)
-                {
-                    var fileStream = new FileStream(filePath, FileMode.Create);
-                    newStudent!.Image!.CopyTo(fileStream);
-                }
+                // var guid = Guid.NewGuid();
+                // var filePath = Path.Combine("wwwroot", guid + ".jpg");
+                // if (newStudent.Image == null)
+                // {
+                //     var fileStream = new FileStream(filePath, FileMode.Create);
+                //     newStudent!.Image!.CopyTo(fileStream);
+                // }
 
                 var myStudent = new Student();
-                editStudent.ImageUrl = filePath;
-                myStudent.ImageUrl = editStudent.ImageUrl;
+                // editStudent.ImageUrl = filePath;
+                // myStudent.ImageUrl = editStudent.ImageUrl;
                 myStudent.FirstName = editStudent.FirstName;
                 myStudent.LastName = editStudent.LastName;
                 myStudent.DOB = editStudent.DOB;
@@ -136,11 +136,11 @@ namespace HomeWork.Controllers
                 myStudent.ImageUrl = editStudent.ImageUrl;
                 myStudent.Matric_no = editStudent.Matric_no;
                 myStudent.Phone_no = editStudent.Phone_no;
-                editStudent.Password = BCrypt.Net.BCrypt.HashPassword(newStudent.Password);
+                editStudent.Password = BCrypt.Net.BCrypt.HashPassword(editStudent.Password);
                 myStudent.Password = editStudent.Password;
                 // myStudent.Created_at = DateTime.Now;
 
-                var sedit = _sStudent.Edit(myStudent);
+                var sedit = _sStudent!.Update(myStudent);
                 if (sedit == null)
                 {
                     return NotFound("User not found");

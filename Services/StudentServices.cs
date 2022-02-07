@@ -82,7 +82,7 @@ namespace HomeWork.Services
         {
             try
             {
-                var student = _assignmentContext.Student.Find(Data.Id);
+                var student = _assignmentContext!.Students.Find(Data.Id);
 
             }
             catch (System.Exception ex)
