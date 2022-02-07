@@ -78,11 +78,11 @@ namespace HomeWork.Services
             throw new NotImplementedException();
         }
 
-        public void Update(Student Data)
+        public void Update(int Id, Student Data)
         {
             try
             {
-                var student = _assignmentContext!.Students.Find(Data.Id);
+                var student = _assignmentContext!.Students.Find(Id);
 
             }
             catch (System.Exception ex)

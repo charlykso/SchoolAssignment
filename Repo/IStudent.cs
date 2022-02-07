@@ -10,7 +10,7 @@ namespace HomeWork.Repo
         public IEnumerable<Student> GetStudents();
         public Student GetStudent(int Id);
         public void Create(Student NewStudent);
-        public void Update(Student Data);
+        public void Update(int Id, Student Data);
         public void Delete(int Id);
     }
 }

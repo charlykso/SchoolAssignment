@@ -112,46 +112,32 @@ namespace HomeWork.Controllers
 
 
         [HttpPut]
-        [Route("edit")]
-        public ActionResult Edit([FromForm] UOrCStudentModel editStudent)
+        [Route("edit/{Id}")]
+        public ActionResult Edit([FromForm] int Id, [FromForm] UOrCStudentModel editStudent)
         {
             try
             {
-                // var guid = Guid.NewGuid();
-                // var filePath = Path.Combine("wwwroot", guid + ".jpg");
-                // if (newStudent.Image == null)
-                // {
-                //     var fileStream = new FileStream(filePath, FileMode.Create);
-                //     newStudent!.Image!.CopyTo(fileStream);
-                // }
 
                 var myStudent = new Student();
-                // editStudent.ImageUrl = filePath;
-                // myStudent.ImageUrl = editStudent.ImageUrl;
                 myStudent.FirstName = editStudent.FirstName;
                 myStudent.LastName = editStudent.LastName;
                 myStudent.DOB = editStudent.DOB;
                 myStudent.Email = editStudent.Email;
                 myStudent.Level = editStudent.Level;
-                myStudent.ImageUrl = editStudent.ImageUrl;
                 myStudent.Matric_no = editStudent.Matric_no;
                 myStudent.Phone_no = editStudent.Phone_no;
                 editStudent.Password = BCrypt.Net.BCrypt.HashPassword(editStudent.Password);
                 myStudent.Password = editStudent.Password;
                 // myStudent.Created_at = DateTime.Now;
 
-                var sedit = _sStudent!.Update(myStudent);
-                if (sedit == null)
-                {
-                    return NotFound("User not found");
-                }
+                _sStudent!.Update(Id, myStudent);
 
                 return Ok(myStudent);
             }
             catch (System.Exception ex)
             {
 
-                return Ok(ex.Message);
+                return BadRequest(ex.Message);
             }
             
         }
