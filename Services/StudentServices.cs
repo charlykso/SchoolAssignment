@@ -1,3 +1,4 @@
+using System.Data.Common;
 using HomeWork.DataAccess;
 using HomeWork.Models;
 using HomeWork.Repo;
@@ -79,7 +80,16 @@ namespace HomeWork.Services
 
         public void Update(Student Data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var student = _assignmentContext.Student.Find(Data.Id);
+
+            }
+            catch (System.Exception ex)
+            {
+                
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
