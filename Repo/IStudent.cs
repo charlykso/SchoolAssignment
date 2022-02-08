@@ -11,6 +11,8 @@ namespace HomeWork.Repo
         public Student GetStudent(int Id);
         public void Create(Student NewStudent);
         public void Update(int Id, Student Data);
+
+        public void UpdateImage(int Id, Student Data);
         public void Delete(int Id);
     }
 }

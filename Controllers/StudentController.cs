@@ -5,6 +5,7 @@ using HomeWork.Models;
 using HomeWork.Repo;
 using HomeWork.Services;
 using Microsoft.AspNetCore.Mvc;
+using SchoolAssignment.DataAccess;
 
 namespace HomeWork.Controllers
 {
@@ -77,7 +78,7 @@ namespace HomeWork.Controllers
             {
                 var guid = Guid.NewGuid();
                 var filePath = Path.Combine("wwwroot", guid + ".jpg");
-                if (newStudent.Image == null)
+                if (newStudent.Image != null)
                 {
                     var fileStream = new FileStream(filePath, FileMode.Create);
                     newStudent!.Image!.CopyTo(fileStream);
@@ -113,12 +114,23 @@ namespace HomeWork.Controllers
 
         [HttpPut]
         [Route("edit/{Id}")]
-        public ActionResult Edit([FromForm] int Id, [FromForm] UOrCStudentModel editStudent)
+        public ActionResult Edit( int Id, [FromForm] UpdateStudent editStudent)
         {
             try
             {
+                if (Id <= 0)
+                {
+                    return BadRequest("invalid Id");
+                }
 
-                var myStudent = new Student();
+                var myStudent = _sStudent.GetStudent(Id);
+
+                if (myStudent == null)
+                {
+                    return NotFound($"Student with the user id {Id} not found");
+                }
+
+
                 myStudent.FirstName = editStudent.FirstName;
                 myStudent.LastName = editStudent.LastName;
                 myStudent.DOB = editStudent.DOB;
@@ -140,6 +152,81 @@ namespace HomeWork.Controllers
                 return BadRequest(ex.Message);
             }
             
+        }
+
+        [HttpDelete("delete/{Id}")]
+        public ActionResult DeleteStudent(int Id)
+        {
+            try
+            {
+                var student = _sStudent.GetStudent(Id);
+                if (student is null)
+                {
+                    return NotFound($"student with the id {Id} not found");
+                }
+
+                try
+                {
+                    _sStudent.Delete(Id);
+
+                    return Ok("Student deleted sucessfully");
+                }
+                catch (System.Exception ex)
+                {
+
+                    return BadRequest(ex.Message);
+                }
+                
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpPut("UpdateImage/{Id}")]
+        public ActionResult EditImage(int Id, [FromForm] UpdateImage stuImage)
+        {
+            try
+            {
+                if (Id <= 0)
+                {
+                    return BadRequest("invalid Id");
+                }
+
+                var myImgStudent = _sStudent.GetStudent(Id);
+
+                if (myImgStudent == null)
+                {
+                    return NotFound($"Student with the user id {Id} not found");
+                }
+
+                var guid = Guid.NewGuid();
+                var filePath = Path.Combine("wwwroot", guid + ".jpg");
+                if (stuImage.Image != null)
+                {
+                    var fileStream = new FileStream(filePath, FileMode.Create);
+                    stuImage!.Image!.CopyTo(fileStream);
+                }
+
+                stuImage.ImageUrl = filePath;
+                myImgStudent.ImageUrl = stuImage.ImageUrl;
+                
+
+                _sStudent!.UpdateImage(Id, myImgStudent);
+
+                var currentSt = _sStudent.GetStudent(Id);
+
+
+                return Ok(currentSt);
+            }
+            catch (System.Exception ex)
+            {
+
+                return BadRequest(ex.Message);
+            }
         }
 
     }

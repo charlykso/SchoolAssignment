@@ -75,7 +75,18 @@ namespace HomeWork.Services
 
         public void Delete(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var student = _assignmentContext!.Students.Find(Id);
+                _assignmentContext.Students.Remove(student!);
+                _assignmentContext.SaveChanges();
+
+            }
+            catch (System.Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void Update(int Id, Student Data)
@@ -83,11 +94,31 @@ namespace HomeWork.Services
             try
             {
                 var student = _assignmentContext!.Students.Find(Id);
+                _assignmentContext.Students.Attach(student!);
+                _assignmentContext.SaveChanges();
+                
 
             }
             catch (System.Exception ex)
             {
                 
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void UpdateImage(int Id, Student data)
+        {
+            try
+            {
+                var student = _assignmentContext!.Students.Find(Id);
+                _assignmentContext.Students.Attach(student!);
+                _assignmentContext.SaveChanges();
+
+
+            }
+            catch (System.Exception ex)
+            {
+
                 Console.WriteLine(ex.Message);
             }
         }

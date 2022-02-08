@@ -38,7 +38,6 @@ namespace HomeWork.DataAccess
         [NotMapped]
         public IFormFile? Image { get; set; }
 
-        [Required]
         [MaxLength(100)]
         public string? ImageUrl { get; set; }
 
