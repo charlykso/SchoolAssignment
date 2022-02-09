@@ -20,7 +20,8 @@ namespace HomeWork.Controllers
             _sStudent = sStudent;
         }
 
-        [HttpGet]
+        [HttpGet("getStudents")]
+        //api/student/getStudents
         public ActionResult GetStudents()
         { 
             try
@@ -47,6 +48,7 @@ namespace HomeWork.Controllers
 
         // [Route("get/{id}")]
         [HttpGet("{Id}")]
+        //api/student/getStudent/id
         public ActionResult<StudentModel> GetStudent(int Id)
         {
             try
@@ -72,6 +74,7 @@ namespace HomeWork.Controllers
 
         [HttpPost]
         [Route("create")]
+        //api/student/create
         public ActionResult create([FromForm] UOrCStudentModel newStudent)
         {
             try
@@ -114,6 +117,7 @@ namespace HomeWork.Controllers
 
         [HttpPut]
         [Route("edit/{Id}")]
+        //api/student/edit/id
         public ActionResult Edit( int Id, [FromForm] UpdateStudent editStudent)
         {
             try
@@ -155,6 +159,7 @@ namespace HomeWork.Controllers
         }
 
         [HttpDelete("delete/{Id}")]
+        //api/student/delete/id
         public ActionResult DeleteStudent(int Id)
         {
             try
@@ -171,10 +176,10 @@ namespace HomeWork.Controllers
 
                     return Ok("Student deleted sucessfully");
                 }
-                catch (System.Exception ex)
+                catch (System.Exception ex1)
                 {
 
-                    return BadRequest(ex.Message);
+                    return BadRequest(ex1.Message);
                 }
                 
             }
@@ -187,6 +192,7 @@ namespace HomeWork.Controllers
         }
 
         [HttpPut("UpdateImage/{Id}")]
+        //api/student/updateImage/id
         public ActionResult EditImage(int Id, [FromForm] UpdateImage stuImage)
         {
             try
