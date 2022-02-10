@@ -2,6 +2,8 @@ using HomeWork.Models;
 using HomeWork.Repo;
 using HomeWork.Services;
 using Microsoft.EntityFrameworkCore;
+using SchoolAssignment.Repo;
+using SchoolAssignment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +16,11 @@ builder.Services.AddDbContext<AssignmentContext>(options =>
 });
 
 builder.Services.AddScoped<IStudent, StudentServices>();
+builder.Services.AddScoped<ILecturer, LecturerServices>();
+
 builder.Services.AddMvc();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Learn more about configu ring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

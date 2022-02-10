@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace HomeWork.Services
 {
-    
+
     public class StudentServices : IStudent
     {
 
@@ -69,7 +69,7 @@ namespace HomeWork.Services
 
                 Console.WriteLine(ex.Message);
             }
-           
+
             // throw new NotImplementedException();
         }
 
@@ -96,12 +96,12 @@ namespace HomeWork.Services
                 var student = _assignmentContext!.Students.Find(Id);
                 _assignmentContext.Students.Attach(student!);
                 _assignmentContext.SaveChanges();
-                
+
 
             }
             catch (System.Exception ex)
             {
-                
+
                 Console.WriteLine(ex.Message);
             }
         }

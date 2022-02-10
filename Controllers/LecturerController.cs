@@ -44,7 +44,7 @@ namespace SchoolAssignment.Controllers
         [HttpGet]
         [Route("GetLecturer/{Id}")]
         //api/lecturer/getlecturer/id
-        public ActionResult GetLecturer(int Id)
+        public ActionResult<LecturerModel> GetLecturer(int Id)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace SchoolAssignment.Controllers
         [HttpPost]
         [Route("create")]
         //api/lecturer/create
-        public ActionResult create([FromForm] LecturerModel NewLecturer)
+        public ActionResult create([FromForm] CreateLecturerModel NewLecturer)
         {
             try
             {
@@ -87,7 +87,8 @@ namespace SchoolAssignment.Controllers
                 lecturer.CourseCode = NewLecturer.CourseCode;
                 lecturer.Title = NewLecturer.Title;
                 lecturer.Phone_no = NewLecturer.Phone_no;
-                lecturer.Password = BCrypt.Net.BCrypt.HashPassword(NewLecturer.Password);
+                NewLecturer.Password = BCrypt.Net.BCrypt.HashPassword(NewLecturer.Password);
+                lecturer.Password = NewLecturer.Password;
                 lecturer.Created_at = DateTime.Now;
 
                 _sLecturer!.Create(lecturer);

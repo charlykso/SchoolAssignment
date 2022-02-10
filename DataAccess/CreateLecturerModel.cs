@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SchoolAssignment.DataAccess
 {
-    public class UpdateLecturer
+    public class CreateLecturerModel
     {
         [Required]
         [MaxLength(10)]
@@ -32,8 +33,14 @@ namespace SchoolAssignment.DataAccess
         [MaxLength(50)]
         public string? CourseTitle { get; set; }
 
+        [NotMapped]
+        public IFormFile? Image { get; set; }
+
+        public string? ImageUrl { get; set; }
+
         [Required]
         [MaxLength(255)]
         public string? Password { get; set; }
+
     }
 }
