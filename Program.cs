@@ -17,6 +17,7 @@ builder.Services.AddDbContext<AssignmentContext>(options =>
 
 builder.Services.AddScoped<IStudent, StudentServices>();
 builder.Services.AddScoped<ILecturer, LecturerServices>();
+builder.Services.AddScoped<IAssignment, AssignmentServices>();
 
 builder.Services.AddMvc();
 builder.Services.AddControllers();

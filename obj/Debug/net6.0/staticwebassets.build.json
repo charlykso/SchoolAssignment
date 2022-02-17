@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UBVrSGCMOoScmem2ET2bU2DJdJzaBGwpm3BAmFEym1s=",
+  "Hash": "7MISayb2rkJAn8n1+1TK9QmBkY+Jf6iAWOOkBqlk+AY=",
   "Source": "HomeWork",
   "BasePath": "_content/HomeWork",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\44577f50-b3f6-4101-8318-7f656b2d3161.jpg"
     },
     {
+      "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\57106fcc-14ae-42bd-b8c1-13bb392885f1.jpg",
+      "SourceId": "HomeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "RelativePath": "57106fcc-14ae-42bd-b8c1-13bb392885f1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\57106fcc-14ae-42bd-b8c1-13bb392885f1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\589aae84-3733-4fdf-a5c9-21ba66652588.jpg",
       "SourceId": "HomeWork",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\615e7b20-9d11-4eb2-b3f5-9fb21e2fd43e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\7b256bd0-8a37-477f-a914-cc39cc1b2de6.jpg",
+      "SourceId": "HomeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "RelativePath": "7b256bd0-8a37-477f-a914-cc39cc1b2de6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\7b256bd0-8a37-477f-a914-cc39cc1b2de6.jpg"
     },
     {
       "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\7f011007-901a-4d00-b5fa-c980de0b7726.jpg",
