@@ -54,7 +54,6 @@ namespace SchoolAssignment.Services
             }
             catch (System.Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
                 return null!;
             }
@@ -90,14 +89,12 @@ namespace SchoolAssignment.Services
                 if (assignment is null)
                 {
                     Console.WriteLine($"No assignment with id {Id} found");
-                    
                 }
                 _assignmentContext.Assignments.Attach(assignment!);
                 _assignmentContext.SaveChanges();
             }
             catch (System.Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
             }
         }
