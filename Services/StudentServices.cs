@@ -81,6 +81,8 @@ namespace HomeWork.Services
                 _assignmentContext.Students.Remove(student!);
                 _assignmentContext.SaveChanges();
 
+                Console.WriteLine("Student deleted successfuly");
+
             }
             catch (System.Exception ex)
             {
@@ -114,7 +116,7 @@ namespace HomeWork.Services
                 _assignmentContext.Students.Attach(student!);
                 _assignmentContext.SaveChanges();
 
-
+                Console.WriteLine("Update successfully");
             }
             catch (System.Exception ex)
             {
