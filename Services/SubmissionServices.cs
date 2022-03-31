@@ -1,5 +1,6 @@
 using System.Linq;
 using HomeWork.Models;
+using Microsoft.EntityFrameworkCore;
 using SchoolAssignment.Repo;
 
 namespace SchoolAssignment.Services
@@ -67,7 +68,12 @@ namespace SchoolAssignment.Services
         {
            try
            {
-                var subAssignments = _assignmentContext!.Submissions!;
+                var subAssignments = _assignmentContext!.Submissions!
+                .Include(a => a.Students)
+                    .ThenInclude(s => s!.Submitted_Homework)
+                .Include(b => b.Assignments)
+                    .ThenInclude(l => l!.Lecturer);
+                
                 if (subAssignments != null)
                 {
                     return subAssignments;

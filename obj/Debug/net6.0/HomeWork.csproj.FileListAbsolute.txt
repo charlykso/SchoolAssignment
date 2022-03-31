@@ -138,3 +138,6 @@ C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\obj\Debug\net6.0\H
 C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\obj\Debug\net6.0\ref\HomeWork.dll
 C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\obj\Debug\net6.0\HomeWork.pdb
 C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\obj\Debug\net6.0\HomeWork.genruntimeconfig.cache
+C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Ikenna Remigius\Documents\ASPDOTNET\SchoolAssignment\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

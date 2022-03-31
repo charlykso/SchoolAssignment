@@ -77,6 +77,7 @@ namespace SchoolAssignment.Controllers
                 var newData = new Submission();
                 Data.AssingmentFileUrl = filePath;
                 newData.AssingmentFileUrl = Data.AssingmentFileUrl;
+                newData.Students = Data.Students;
                 newData.Date_Submitted = DateTime.Now;
 
                 _sSubmission.Create(newData);
@@ -107,6 +108,7 @@ namespace SchoolAssignment.Controllers
                 }
                 sub.Score = data.Score;
                 sub.Comment = data.Comment;
+                sub.Status = "Marked";
                 sub.Date_Marked = DateTime.Now.ToString();
 
                 _sSubmission.Update(Id, sub);

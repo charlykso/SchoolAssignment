@@ -15,9 +15,6 @@ namespace HomeWork.Models
         public string? AssingmentFileUrl { get; set; }
 
         [MaxLength(10)]
-        public string? DueDate { get; set; }
-
-        [MaxLength(10)]
         public int Score { get; set; } = 0;
 
         [MaxLength(50)]

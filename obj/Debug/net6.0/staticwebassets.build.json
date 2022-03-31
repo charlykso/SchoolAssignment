@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7MISayb2rkJAn8n1+1TK9QmBkY+Jf6iAWOOkBqlk+AY=",
+  "Hash": "wVo1ORfGD6i4nudOeiarkF34YAVVIpXJyT9l4nxj+ng=",
   "Source": "HomeWork",
   "BasePath": "_content/HomeWork",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\14d98cd2-2266-472a-949c-5f6ba5923ce9.jpg",
+      "SourceId": "HomeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "RelativePath": "14d98cd2-2266-472a-949c-5f6ba5923ce9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\14d98cd2-2266-472a-949c-5f6ba5923ce9.jpg"
+    },
     {
       "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\18c069fb-73a1-4fe6-8c15-cde9bc0c8772.jpg",
       "SourceId": "HomeWork",

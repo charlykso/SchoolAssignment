@@ -66,7 +66,9 @@ namespace SchoolAssignment.Services
         {
             try
             {
-                var assignment = _assignmentContext!.Assignments.Include(a => a.Lecturer);
+                var assignment = _assignmentContext!.Assignments
+                .Include(a => a.Lecturer)
+                .Include(b => b.Submitted_Assignment);
 
                 if (assignment is null)
                 {
