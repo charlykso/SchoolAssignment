@@ -1,18 +1,15 @@
 using System.ComponentModel.DataAnnotations;
+using HomeWork.Models;
 
 namespace SchoolAssignment.DataAccess
 {
     public class AssignmentModel
     {
         public int Id { get; set; }
-        
-        [Required]
-        [MaxLength(10)]
-        public string? CourseCode { get; set; }
+
 
         [Required]
-        [MaxLength(50)]
-        public string? CourseTitle { get; set; }
+        public string? Question { get; set; }
 
         [Required]
         [MaxLength(10)]
@@ -28,5 +25,7 @@ namespace SchoolAssignment.DataAccess
 
         [Required]
         public DateTime Created_at { get; set; }
+
+        public Lecturer? Lecturer { get; set; }
     }
 }

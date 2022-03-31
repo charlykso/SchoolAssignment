@@ -4,6 +4,7 @@ using HomeWork.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeWork.Migrations
 {
     [DbContext(typeof(AssignmentContext))]
-    partial class AssignmentContextModelSnapshot : ModelSnapshot
+    [Migration("20220330163144_remove_courseCode_and_CourseTitle_from_Assignment")]
+    partial class remove_courseCode_and_CourseTitle_from_Assignment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +69,7 @@ namespace HomeWork.Migrations
 
                     b.HasIndex("LecturerId");
 
-                    b.ToTable("Assignments", (string)null);
+                    b.ToTable("Assignments");
                 });
 
             modelBuilder.Entity("HomeWork.Models.Lecturer", b =>
@@ -126,7 +128,7 @@ namespace HomeWork.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Lecturers", (string)null);
+                    b.ToTable("Lecturers");
                 });
 
             modelBuilder.Entity("HomeWork.Models.Student", b =>
@@ -186,7 +188,7 @@ namespace HomeWork.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("HomeWork.Models.Submission", b =>
@@ -236,7 +238,7 @@ namespace HomeWork.Migrations
 
                     b.HasIndex("StudentsId");
 
-                    b.ToTable("Submissions", (string)null);
+                    b.ToTable("Submissions");
                 });
 
             modelBuilder.Entity("HomeWork.Models.Assignment", b =>

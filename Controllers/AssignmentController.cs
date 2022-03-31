@@ -72,12 +72,12 @@ namespace SchoolAssignment.Controllers
             try
             {
                 var assignment = new Assignment();
-                assignment.CourseCode = NewAssignmnet.CourseCode;
-                assignment.CourseTitle =  NewAssignmnet.CourseTitle;
+                assignment.Question = NewAssignmnet.Question;
                 assignment.Level = NewAssignmnet.Level;
                 assignment.DueDate = NewAssignmnet.DueDate;
                 assignment.Created_at = DateTime.Now;
                 assignment.TotalMark = NewAssignmnet.TotalMark;
+                assignment.Lecturer = NewAssignmnet.Lecturer;
 
                 _sAssignment!.CreateAssignment(assignment);
 
@@ -109,11 +109,11 @@ namespace SchoolAssignment.Controllers
                     return NotFound($"Assignment with id {Id} not found");
                 }
 
-                assignment.CourseCode = EditAssignment.CourseCode;
-                assignment.CourseTitle = EditAssignment.CourseTitle;
+                assignment.Question = EditAssignment.Question;
                 assignment.Level = EditAssignment.Level;
                 assignment.DueDate = EditAssignment.DueDate;
                 assignment.TotalMark = EditAssignment.TotalMark;
+                assignment.Lecturer = EditAssignment.Lecturer;
 
                 _sAssignment.UpdateAssignment(Id, assignment);
 

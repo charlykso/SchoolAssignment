@@ -7,12 +7,7 @@ namespace HomeWork.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(10)]
-        public string? CourseCode { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string? CourseTitle { get; set; }
+        public string? Question { get; set; }
 
         [Required]
         [MaxLength(10)]

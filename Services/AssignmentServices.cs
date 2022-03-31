@@ -1,4 +1,7 @@
 using HomeWork.Models;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SchoolAssignment.Repo;
 
 namespace SchoolAssignment.Services
@@ -63,7 +66,7 @@ namespace SchoolAssignment.Services
         {
             try
             {
-                var assignment = _assignmentContext!.Assignments;
+                var assignment = _assignmentContext!.Assignments.Include(a => a.Lecturer);
 
                 if (assignment is null)
                 {
