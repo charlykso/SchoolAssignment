@@ -1,3 +1,4 @@
+using System.Reflection.PortableExecutable;
 using HomeWork.Models;
 using HomeWork.Repo;
 using HomeWork.Services;
@@ -5,10 +6,36 @@ using Microsoft.EntityFrameworkCore;
 using SchoolAssignment.Repo;
 using SchoolAssignment.Services;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//for Jwt
+builder.Services.AddAuthentication(opt => 
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddCookie(cfg => cfg.SlidingExpiration = true)
+    .AddJwtBearer(options => 
+    {
+        try
+        {
+            options.SaveToke  = true;
+            options.RequireHttpsMetadata = false;
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true
+            }
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
+    })
 
 //for EF Core
 builder.Services.AddDbContext<AssignmentContext>(options =>
