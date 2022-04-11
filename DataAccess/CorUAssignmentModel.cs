@@ -20,6 +20,7 @@ namespace SchoolAssignment.DataAccess
         [MaxLength(10)]
         public string? DueDate { get; set; }
 
+        public int? LecturerId { get; set; }
         public Lecturer? Lecturer { get; set; }
     }
 }

@@ -212,9 +212,9 @@ namespace HomeWork.Migrations
                     b.Property<DateTime>("Date_Submitted")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DueDate")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                    // b.Property<string>("DueDate")
+                    //     .HasMaxLength(10)
+                    //     .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("Score")
                         .HasMaxLength(10)

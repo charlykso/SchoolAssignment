@@ -46,5 +46,8 @@ namespace HomeWork.Models
 
         [Required]
         public DateTime Created_at { get; set; }
+
+        public ICollection<Assignment>? Assignments { get; set; }
+
     }
 }

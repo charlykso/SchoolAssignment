@@ -24,7 +24,10 @@ namespace HomeWork.Models
         [Required]
         public DateTime Created_at { get; set; }
 
+        public int? LecturerId { get; set; }
+
         public Lecturer? Lecturer { get; set; }
+
         public ICollection<Submission>? Submitted_Assignment { get; set; }
     }
 }

@@ -77,7 +77,8 @@ namespace SchoolAssignment.Controllers
                 assignment.DueDate = NewAssignmnet.DueDate;
                 assignment.Created_at = DateTime.Now;
                 assignment.TotalMark = NewAssignmnet.TotalMark;
-                assignment.Lecturer = NewAssignmnet.Lecturer;
+                // assignment.Lecturer = NewAssignmnet.Lecturer;
+                assignment.LecturerId = NewAssignmnet.LecturerId;
 
                 _sAssignment!.CreateAssignment(assignment);
 
@@ -113,7 +114,7 @@ namespace SchoolAssignment.Controllers
                 assignment.Level = EditAssignment.Level;
                 assignment.DueDate = EditAssignment.DueDate;
                 assignment.TotalMark = EditAssignment.TotalMark;
-                assignment.Lecturer = EditAssignment.Lecturer;
+                assignment.LecturerId = EditAssignment.LecturerId;
 
                 _sAssignment.UpdateAssignment(Id, assignment);
 

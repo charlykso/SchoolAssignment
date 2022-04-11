@@ -26,6 +26,7 @@ namespace SchoolAssignment.DataAccess
         [Required]
         public DateTime Created_at { get; set; }
 
+        public int? LecturerId { get; set; }
         public Lecturer? Lecturer { get; set; }
     }
 }

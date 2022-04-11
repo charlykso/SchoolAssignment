@@ -28,8 +28,10 @@ namespace HomeWork.Models
 
         public DateTime Date_Submitted { get; set; }
 
+        public int? AssignmentId { get; set; }
         public Assignment? Assignments { get; set; }
 
+        public int? StudentId { get; set; }
         public Student? Students { get; set; }
     }
 }

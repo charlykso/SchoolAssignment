@@ -82,7 +82,7 @@ namespace SchoolAssignment.Controllers
                 lecturer.ImageUrl = filepath;
                 lecturer.FirstName = NewLecturer.FirstName;
                 lecturer.LastName = NewLecturer.LastName;
-                lecturer.Email = NewLecturer.LastName;
+                lecturer.Email = NewLecturer.Email;
                 lecturer.CourseTitle = NewLecturer.CourseTitle;
                 lecturer.CourseCode = NewLecturer.CourseCode;
                 lecturer.Title = NewLecturer.Title;

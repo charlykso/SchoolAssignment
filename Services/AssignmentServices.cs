@@ -66,18 +66,19 @@ namespace SchoolAssignment.Services
         {
             try
             {
-                var assignment = _assignmentContext!.Assignments
-                .Include(a => a!.Lecturer)
-                .Include(b => b!.Submitted_Assignment)
-                    .ThenInclude(s => s!.Students);
+                var assignment = _assignmentContext!.Assignments!
+                .Include(ass => ass!.Lecturer)
+                .Include(ass => ass!.Submitted_Assignment);
 
-                if (assignment is null)
+                var assignments = assignment!.ThenInclude(ass => ass.Students);
+
+                if (assignments is null)
                 {
                     Console.WriteLine("No Assignment found");
                     return null!;
                 }
 
-                return assignment;
+                return assignments;
             }
             catch (System.Exception ex)
             {
