@@ -79,6 +79,8 @@ namespace SchoolAssignment.Controllers
                 newData.AssingmentFileUrl = Data.AssingmentFileUrl;
                 newData.Students = Data.Students;
                 newData.Date_Submitted = DateTime.Now;
+                newData.AssignmentId = Data.AssignmentId;
+                newData.StudentId = Data.StudentId;
 
                 _sSubmission.Create(newData);
 

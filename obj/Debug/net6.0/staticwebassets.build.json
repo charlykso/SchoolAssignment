@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vrcKTNkdoePMr4b3lEgru77MWHbEwRp0kuaNFm59RWI=",
+  "Hash": "ZxBVStkmYrjARM5f+8kAD3ak2angGGPwJz6dnN26BfE=",
   "Source": "HomeWork",
   "BasePath": "_content/HomeWork",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\68b9013c-4922-4504-b43a-ef1540a3ed60.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\b153cb90-37d6-475e-968c-bd4e65f325f0.jpg",
+      "SourceId": "HomeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "RelativePath": "b153cb90-37d6-475e-968c-bd4e65f325f0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\b153cb90-37d6-475e-968c-bd4e65f325f0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\d433caf7-31a9-472a-aa3a-0b9d07ac65de.jpg",
+      "SourceId": "HomeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\",
+      "BasePath": "_content/HomeWork",
+      "RelativePath": "d433caf7-31a9-472a-aa3a-0b9d07ac65de.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\d433caf7-31a9-472a-aa3a-0b9d07ac65de.jpg"
     },
     {
       "Identity": "C:\\Users\\Ikenna Remigius\\Documents\\ASPDOTNET\\SchoolAssignment\\wwwroot\\e9897594-871f-46b7-bc3d-b49014043689.jpg",

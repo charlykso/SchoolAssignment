@@ -17,6 +17,8 @@ namespace SchoolAssignment.DataAccess
         public DateTime Date_Submitted { get; set; }
 
         public Student? Students { get; set; }
+        public int? StudentId { get; set; }
+        public int? AssignmentId { get; set; }
 
     }
 }

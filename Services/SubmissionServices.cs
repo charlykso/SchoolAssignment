@@ -69,10 +69,10 @@ namespace SchoolAssignment.Services
            try
            {
                 var subAssignments = _assignmentContext!.Submissions!
-                .Include(a => a.Students)
-                    .ThenInclude(s => s!.Submitted_Homework)
                 .Include(b => b.Assignments)
-                    .ThenInclude(l => l!.Lecturer);
+                    .ThenInclude(l => l!.Lecturer)
+                .Include(a => a.Students)
+                    .ThenInclude(s => s!.Submitted_Homework);
                 
                 if (subAssignments != null)
                 {
